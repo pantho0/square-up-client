@@ -6,50 +6,41 @@ import { button as buttonStyles } from "@heroui/theme";
 import { siteConfig } from "../config/site";
 import { title, subtitle } from "../components/primitives";
 import { GithubIcon } from "../components/icons";
+import { Button } from "@heroui/button";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Make&nbsp;</span>
-        <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
-        <br />
-        <span className={title()}>
-          websites regardless of your design experience.
-        </span>
-        <div className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
-        </div>
+    <section className="flex justify-center flex-col items-center py-10 space-y-8">
+      <div className="w-3/4 flex justify-center">
+        <h2 className="font-semibold text-6xl text-center   text-[#FEE3FA]">
+          A studio for digital products that work
+        </h2>
       </div>
 
-      <div className="flex gap-3">
-        <Link
-          isExternal
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-          href={siteConfig.links.docs}
-        >
-          Documentation
-        </Link>
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div>
-
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
+      <div>
+        <p className="flex justify-center flex-wrap gap-2 items-center text-[18px] font-semibold text-[#FEE3FA]">
+          For{" "}
           <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
+            <Button className="font-semibold text-[18px] text-[#FEE3FA] bg-[#FF80C0]">
+              Startup
+            </Button>
+            ,{" "}
+            <Button className="font-semibold text-[18px] text-[#FEE3FA] bg-[#FF80C0]">
+              Enterprise leaders
+            </Button>
+            ,{" "}
+            <Button className="font-semibold text-[18px] text-[#FEE3FA] bg-[#FF80C0]">
+              Media & Publishers
+            </Button>
+            ,{" "}
+            <p className="font-semibold text-[18px] inline-block   text-[#FEE3FA]">
+              and
+            </p>{" "}
+            <Button className="font-semibold text-[18px] text-[#FEE3FA] bg-[#FF80C0]">
+              Social Good
+            </Button>
           </span>
-        </Snippet>
+        </p>
       </div>
     </section>
   );
