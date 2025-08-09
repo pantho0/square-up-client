@@ -52,23 +52,23 @@ const CompanyLogosSection: React.FC<CompanyLogosSectionProps> = ({
   className = "",
 }) => {
   return (
-    <section className={`bg-[#13050C] px-4 ${className} -mt-30`}>
-      <div className="max-w-6xl mx-auto">
+    <section className={`bg-[#13050C]  ${className} -mt-30`}>
+      <div className=" mx-auto">
         {/* Header with pill-shaped background and decorative lines */}
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-0">
             {/* Left decorative line */}
-            <div className="hidden sm:block w-16 h-px bg-gradient-to-r from-transparent to-gray-600"></div>
+            <div className="hidden sm:block w-full h-px bg-[#FF80C0]"></div>
 
             {/* Pill-shaped container */}
-            <div className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-gray-600 bg-transparent">
+            <div className="inline-flex items-center bg-[#1A1A1A] justify-center px-6 py-3 rounded-full border border-[#FF80C0] ">
               <span className="text-gray-300 text-sm font-medium whitespace-nowrap">
                 {title}
               </span>
             </div>
 
             {/* Right decorative line */}
-            <div className="hidden sm:block w-16 h-px bg-gradient-to-l from-transparent to-gray-600"></div>
+            <div className="hidden sm:block w-full h-px bg-[#FF80C0]"></div>
           </div>
         </div>
 
