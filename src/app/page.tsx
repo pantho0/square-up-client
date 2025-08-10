@@ -1,5 +1,6 @@
 import { Banner } from "../components/Home/Banner";
 import CompanyLogosSection from "../components/Home/CompanyLogosSection";
+import FaqSection from "../components/Home/FaqSction";
 import OurServices from "../components/Home/OurServices";
 import TestimonialSection from "../components/Home/TestimonialSection";
 import WhyChooseUs from "../components/Home/WhyChooseUs";
@@ -12,6 +13,7 @@ export default function Home() {
       <OurServices />
       <WhyChooseUs />
       <TestimonialSection />
+      <FaqSection />
     </>
   );
 }
