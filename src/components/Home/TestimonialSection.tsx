@@ -1,5 +1,12 @@
 import { Button } from "@heroui/button";
 import React from "react";
+import img1 from "../../../public/images/img1.png";
+import img2 from "../../../public/images/img2.png";
+import img3 from "../../../public/images/img3.png";
+import img4 from "../../../public/images/img4.png";
+import img5 from "../../../public/images/img5.png";
+import img6 from "../../../public/images/img6.png";
+import Image from "next/image";
 
 // Define the type for a single testimonial
 interface Testimonial {
@@ -8,6 +15,7 @@ interface Testimonial {
   clientName: string;
   clientTitle: string;
   websiteUrl: string;
+  avatar: any;
 }
 
 // Dummy data for the testimonials, based on the provided image
@@ -16,6 +24,7 @@ const testimonials: Testimonial[] = [
     title:
       "CreaSeils has been Instrumental in Transforming our Online Presence.",
     text: "Their team's expertise in web development and design resulted in a visually stunning and user-friendly e-commerce platform. Our online sales have skyrocketed, and we couldn't be happier.",
+    avatar: img1,
     clientName: "John Smith",
     clientTitle: "CEO of Chic Boutique",
     websiteUrl: "#", // Placeholder URL
@@ -26,6 +35,7 @@ const testimonials: Testimonial[] = [
     clientName: "Sarah Johnson",
     clientTitle: "Founder of HungryBites",
     websiteUrl: "#", // Placeholder URL
+    avatar: img2,
   },
   {
     title:
@@ -34,6 +44,7 @@ const testimonials: Testimonial[] = [
     clientName: "Mark Thompson",
     clientTitle: "CEO of EventMasters",
     websiteUrl: "#", // Placeholder URL
+    avatar: img3,
   },
   {
     title: "ProTech Solutions turned to CreaSeils to automate our workflow",
@@ -41,6 +52,7 @@ const testimonials: Testimonial[] = [
     clientName: "Laura Adams",
     clientTitle: "COO of ProTech Solutions",
     websiteUrl: "#", // Placeholder URL
+    avatar: img4,
   },
   {
     title:
@@ -49,6 +61,7 @@ const testimonials: Testimonial[] = [
     clientName: "Michael Anderson",
     clientTitle: "Founder of Dream Homes Realty",
     websiteUrl: "#", // Placeholder URL
+    avatar: img5,
   },
   {
     title:
@@ -57,6 +70,7 @@ const testimonials: Testimonial[] = [
     clientName: "Emily Turner",
     clientTitle: "CEO of FitLife Tracker",
     websiteUrl: "#", // Placeholder URL
+    avatar: img6,
   },
 ];
 
@@ -103,12 +117,10 @@ const TestimonialSection: React.FC = () => {
                 <div className="flex border border-[#FF80C0] rounded-lg p-3 items-end justify-between mt-4">
                   <div className="flex items-center space-x-4">
                     {/* Avatar with initials or placeholder */}
-                    <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center text-white text-xl font-bold font-inter">
-                      {testimonial.clientName
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center text-white text-xl font-bold font-inter">
+                      <Image src={testimonial.avatar} alt="" />
                     </div>
+
                     <div>
                       <p className="font-bold text-white font-inter">
                         {testimonial.clientName}
