@@ -11,7 +11,7 @@ export const Banner = () => {
             </h2>
           </div>
 
-          <div className="border border-[#FF80C0] p-5 rounded-md">
+          <div className="border border-[#FF80C0] px-8 py-5 rounded-lg">
             <p className="flex justify-center flex-wrap gap-2 items-center text-[18px] font-semibold text-[#FEE3FA]">
               For{" "}
               <span>
