@@ -37,7 +37,7 @@ const OurServices = () => {
   return (
     <section className="w-full  text-white">
       {/* Background Section */}
-      <div className="relative bg-[url('/images/ourservicesbg.png')] w-full h-64 flex items-center justify-center text-center">
+      <div className="relative bg-[url('/images/ourservicesbg.png')] object-bottom bg-no-repeat w-full h-64 flex items-center justify-center text-center">
         <div className="absolute inset-0 bg-opacity-40" />
         <div className="relative z-10">
           <h2 className="text-4xl font-bold">Our Services</h2>
