@@ -1,3 +1,4 @@
+import { Button } from "@heroui/button";
 import React from "react";
 
 // Define the type for a single testimonial
@@ -65,38 +66,41 @@ const TestimonialSection: React.FC = () => {
       {" "}
       {/* Main container with vertical padding */}
       {/* Testimonials Header Section */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-4 font-inter">
-          What our Clients say About us
-        </h2>
-        <p className="text-lg text-gray-400 max-w-2xl mx-auto font-inter">
-          At CreaSeils, we take pride in delivering exceptional digital products
-          and services that drive success for our clients. Here's what some of
-          our satisfied clients have to say about their experience working with
-          us
-        </p>
+      <div className="relative bg-[url('/images/testimonialbg.png')] h-64  bg-cover bg-no-repeats flex justify-center items-center  sm:px-6 lg:px-8 text-center mb-12">
+        <div className="absolute inset-0 bg-opacity-40" />
+        <div className="relative z-10">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-[#FEE3FA] font-inter">
+            What our Clients say About us
+          </h2>
+          <p className="text-lg text-[#FEE3FA] max-w-2xl mx-auto font-inter">
+            At CreaSeils, we take pride in delivering exceptional digital
+            products and services that drive success for our clients. Here's
+            what some of our satisfied clients have to say about their
+            experience working with us
+          </p>
+        </div>
       </div>
       {/* Testimonials Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 justify-center gap-8">
         {testimonials.map((testimonial, index) => (
           <React.Fragment key={index}>
-            <div className="p-8 rounded-2xl shadow-xl border border-gray-700 bg-black/50 backdrop-blur-md relative overflow-hidden">
+            <div className="p-8  relative overflow-hidden">
               {/* Background gradient effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-violet-900 to-indigo-900 opacity-10 rounded-2xl"></div>
+              <div className="absolute inset-0  rounded-2xl"></div>
 
               {/* Content container with padding */}
               <div className="relative z-10 space-y-6 h-full flex flex-col">
                 <div className="flex-grow">
-                  <h3 className="text-xl font-semibold mb-2 font-inter text-white">
+                  <h3 className="text-xl font-semibold mb-2 font-inter text-[#FEE3FA]">
                     {testimonial.title}
                   </h3>
-                  <p className="text-gray-400 leading-relaxed font-inter">
+                  <p className="leading-relaxed font-inter text-[#FEE3FA]">
                     {testimonial.text}
                   </p>
                 </div>
 
                 {/* Client and button section */}
-                <div className="flex items-end justify-between mt-4">
+                <div className="flex border border-[#FF80C0] rounded-lg p-3 items-end justify-between mt-4">
                   <div className="flex items-center space-x-4">
                     {/* Avatar with initials or placeholder */}
                     <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center text-white text-xl font-bold font-inter">
@@ -114,14 +118,15 @@ const TestimonialSection: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  <a
+                  <Button
                     href={testimonial.websiteUrl}
+                    size="lg"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 text-sm font-semibold rounded-full border border-violet-500 text-violet-300 hover:bg-violet-600 hover:text-white transition-colors duration-200 font-inter"
+                    className="px-4 py-2 text-sm rounded-sm font-semibold bg-[#FF80C0] text-[#FEE3FA] hover:text-white transition-colors duration-200 font-inter"
                   >
                     Open Website
-                  </a>
+                  </Button>
                 </div>
               </div>
             </div>
