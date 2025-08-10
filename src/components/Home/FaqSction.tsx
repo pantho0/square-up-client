@@ -65,15 +65,9 @@ const faqs: FaqItem[] = [
 
 const FaqSection = () => {
   return (
-    <div className="relative w-full min-h-screen py-16">
-      {/* This is the container for the background image. You will need to add a Tailwind class
-        or inline style to set your background image here.
-        Example: bg-[url('/your-public-folder-image.jpg')]
-      */}
-      <div className="absolute inset-0 z-0 bg-[url('https://placehold.co/1920x1080/0d001a/1c1236?text=Background+Image')] bg-cover bg-center"></div>
-
+    <div className="w-full min-h-screen py-16">
       {/* Header section positioned to be centered on the background image */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center text-white py-24 px-4">
+      <div className="relative z-10 bg-[url('/images/faqbg.png')] bg-cover bg-center flex flex-col items-center justify-center text-center text-white py-24 px-4">
         <h2 className="text-4xl sm:text-5xl font-bold mb-2 font-inter">
           Frequently Asked Questions
         </h2>
