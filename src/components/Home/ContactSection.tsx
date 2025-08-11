@@ -35,7 +35,7 @@ const ContactSection: React.FC = () => {
   return (
     <div className="w-full min-h-screen py-16">
       {/* Main content container with backdrop-blur */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10">
         {/* Header section with text centered */}
         <div className="text-center bg-[url('/images/contactbg.png')] bg-cover bg-center text-white py-12">
           <div className="relative mb-3">
@@ -54,7 +54,7 @@ const ContactSection: React.FC = () => {
         </div>
 
         {/* Contact Form Section */}
-        <div className="mt-12 space-y-8 text-[#FEE3FA]">
+        <div className="mt-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-[#FEE3FA]">
           {/* Nom et prénom & E-mail section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="p-6 rounded-xl border border-[#FF80C0] bg-[#242424]/50 backdrop-blur-md">
