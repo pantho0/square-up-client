@@ -3,7 +3,6 @@ import { CheckIcon } from "lucide-react";
 import React from "react";
 import { useState } from "react";
 
-
 // Define types for the contact reasons
 type ContactReason =
   | "Conception de sites Web"
@@ -55,7 +54,6 @@ const ContactSection: React.FC = () => {
 
         {/* Contact Form Section */}
         <div className=" max-w-4xl border border-[#FF80C0] py-8 mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-[#FEE3FA]">
-
           {/* Nom et prénom & E-mail section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="p-6 rounded-xl border border-[#FF80C0] bg-[#242424]/50 backdrop-blur-md">

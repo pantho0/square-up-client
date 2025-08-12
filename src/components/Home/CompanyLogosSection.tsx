@@ -22,7 +22,7 @@ interface CompanyLogosSectionProps {
 const defaultLogos: CompanyLogo[] = [
   {
     name: "Zapier",
-    src: zapier, // You'll need to add these logo files to your public/logos folder
+    src: zapier,
     alt: "Zapier logo",
   },
   {
@@ -58,39 +58,40 @@ const CompanyLogosSection: React.FC<CompanyLogosSectionProps> = ({
   className = "",
 }) => {
   return (
-    <section className={`bg-[#160B11]  ${className} -mt-30`}>
-      <div className=" mx-auto">
+    <section className={`bg-[#160B11] ${className} py-8 md:py-8`}>
+      <div className="">
         {/* Header with pill-shaped background and decorative lines */}
-        <div className="text-center mb-4">
-          <div className="flex items-center justify-center gap-0">
+        <div className="text-center mb-8 md:mb-12">
+          {/* Use flex-wrap and justify-center to handle smaller screens */}
+          <div className="flex items-center justify-center gap-2 sm:gap-4">
             {/* Left decorative line */}
-            <div className="hidden sm:block w-full h-px bg-[#FF80C0]"></div>
+            <div className="hidden sm:block w-full max-w-full h-px bg-[#FF80C0] opacity-50"></div>
 
             {/* Pill-shaped container */}
-            <div className="inline-flex items-center bg-[#1A1A1A] justify-center px-6 py-3 rounded-full border border-[#FF80C0] ">
-              <span className="text-gray-300 text-sm font-medium whitespace-nowrap">
+            <div className="inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-3 rounded-full border border-[#FF80C0] bg-[#1A1A1A]">
+              <span className="text-gray-300 text-xs sm:text-sm font-medium whitespace-nowrap">
                 {title}
               </span>
             </div>
 
             {/* Right decorative line */}
-            <div className="hidden sm:block w-full h-px bg-[#FF80C0]"></div>
+            <div className="hidden sm:block w-full max-w-full h-px bg-[#FF80C0] opacity-50"></div>
           </div>
         </div>
 
         {/* Logos grid */}
-        <div className="flex flex-wrap items-center justify-center pb-4 gap-8 md:gap-12 lg:gap-16">
+        <div className="flex flex-wrap items-center justify-center pb-4 gap-4 sm:gap-6 md:gap-8">
           {logos.map((logo, index) => (
             <div
               key={index}
-              className="flex items-center bg-[#13050C] px-9 py-4 justify-center opacity-60 hover:opacity-100 transition-opacity duration-300"
+              className="flex items-center justify-center px-4 py-3 sm:px-6 sm:py-4 bg-[#13050C] rounded-lg opacity-60 hover:opacity-100 transition-opacity duration-300"
             >
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 width={120}
                 height={40}
-                className="h-8 w-auto object-contain filter brightness-0 invert"
+                className="h-6 sm:h-8 w-auto object-contain filter brightness-0 invert"
                 priority={index < 3} // Load first 3 logos with priority
               />
             </div>
