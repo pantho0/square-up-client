@@ -9,6 +9,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "../config/site";
 import { fontSans } from "../config/fonts";
 import { Navbar } from "../components/navbar";
+import Footer from "../components/Home/Footer";
 
 const barlow = Barlow({ weight: "400", subsets: ["latin"] });
 
@@ -36,7 +37,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en" className={`${barlow.className} bg-[#13050C]`}>
+    <html
+      suppressHydrationWarning
+      lang="en"
+      className={`${barlow.className} bg-[#13050C]`}
+    >
       <head />
       <body
         className={clsx(
@@ -47,19 +52,9 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen bg-[#13050C]">
             <Navbar />
-            <main className="flex-grow">
-              {children}
-            </main>
+            <main className="flex-grow">{children}</main>
             <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://heroui.com?utm_source=next-app-template"
-                title="heroui.com homepage"
-              >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">HeroUI</p>
-              </Link>
+              <Footer />
             </footer>
           </div>
         </Providers>
