@@ -1,9 +1,10 @@
 import { title } from "@/src/components/primitives";
+import DesignSection from "@/src/components/Services/DesignSection";
 
 export default function ServicesPage() {
   return (
-    <div>
-      <h1 className={title()}>Services</h1>
-    </div>
+    <>
+      <DesignSection/>
+    </>
   );
 }
