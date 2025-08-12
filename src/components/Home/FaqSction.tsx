@@ -3,14 +3,12 @@ import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { MinusIcon, PlusIcon } from "lucide-react";
 
-// Define the type for a single FAQ item
 interface FaqItem {
   number: string;
   question: string;
   answer: string;
 }
 
-// Dummy data for the FAQ section, based on the provided image
 const faqs: FaqItem[] = [
   {
     number: "01",
@@ -66,46 +64,46 @@ const faqs: FaqItem[] = [
 const FaqSection = () => {
   return (
     <div className="w-full min-h-screen py-16">
-      {/* Header section positioned to be centered on the background image */}
-      <div className="relative z-10 bg-[url('/images/faqbg.png')] bg-cover bg-center flex flex-col items-center justify-center text-center text-white py-24 px-4">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-2 font-inter">
+      {/* Header */}
+      <div className="relative z-10 bg-[url('/images/faqbg.png')] bg-cover bg-center flex flex-col items-center justify-center text-center py-24 px-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 font-inter text-[#FEE3FA]">
           Frequently Asked Questions
         </h2>
-        <p className="text-lg text-gray-300 max-w-xl font-inter">
+        <p className="text-base sm:text-lg text-[#FEE3FA] max-w-xl font-inter">
           Still you have any questions? Contact our Team via{" "}
           <a
             href="mailto:info@CreaSeils.com"
-            className="underline text-blue-300 hover:text-blue-200"
+            className="underline text-[#FF80C0] hover:text-white transition-colors"
           >
             info@CreaSeils.com
           </a>
         </p>
       </div>
 
-      {/* FAQ content grid */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-12">
+      {/* FAQ Grid */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
         {faqs.map((faq, index) => (
           <Disclosure key={index} defaultOpen={index === 0}>
             {({ open }) => (
-              <div className="border-b border-gray-600 transition-all duration-300">
-                <Disclosure.Button className="flex w-full items-start justify-between py-6 text-left text-white focus:outline-none">
+              <div className="border-b border-[#FF5733] border-t-0 border-x-0 transform transition-transform duration-300 ease-out hover:scale-[1.03]">
+                <Disclosure.Button className="flex w-full items-start justify-between py-5 px-4 sm:px-6 text-left focus:outline-none">
                   <div className="flex items-start">
-                    <span className="flex-shrink-0 text-xl font-bold text-violet-400 mr-6">
+                    <span className="flex-shrink-0 text-xl font-bold text-[#FF80C0] mr-4 sm:mr-6">
                       {faq.number}
                     </span>
-                    <span className="text-lg font-semibold font-inter">
+                    <span className="text-base sm:text-lg font-semibold font-inter text-[#FEE3FA]">
                       {faq.question}
                     </span>
                   </div>
-                  <span className="ml-6 flex h-7 items-center">
+                  <span className="ml-4 flex h-7 items-center">
                     {open ? (
-                      <MinusIcon className="h-6 w-6 text-white" />
+                      <MinusIcon className="h-6 w-6 text-[#FEE3FA]" />
                     ) : (
-                      <PlusIcon className="h-6 w-6 text-white" />
+                      <PlusIcon className="h-6 w-6 text-[#FEE3FA]" />
                     )}
                   </span>
                 </Disclosure.Button>
-                <Disclosure.Panel className="pb-6 text-gray-400 text-base font-inter">
+                <Disclosure.Panel className="pb-5 px-4 sm:px-6 text-sm sm:text-base text-[#FEE3FA] font-inter">
                   {faq.answer}
                 </Disclosure.Panel>
               </div>
