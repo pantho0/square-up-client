@@ -1,9 +1,11 @@
-import { title } from "@/src/components/primitives";
+import ContactSection from "@/src/components/Home/ContactSection";
+import ProcessSection from "@/src/components/Process/ProcessSection";
 
 export default function ProcessPage() {
   return (
-    <div>
-      <h1 className={title()}>Process</h1>
-    </div>
+    <>
+      <ProcessSection />
+      <ContactSection />
+    </>
   );
 }

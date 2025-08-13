@@ -28,7 +28,10 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <div className="w-full min-h-screen py-12 sm:py-16  bg-black bg-opacity-90" suppressHydrationWarning>
+    <div
+      className="w-full min-h-screen py-12 sm:py-16  bg-transparent bg-opacity-90"
+      suppressHydrationWarning
+    >
       {/* Header */}
       <div className="relative w-full bg-[url('/images/contactbg.png')] bg-cover bg-center text-[#FEE3FA] py-16 sm:py-20 ">
         <div className="max-w-4xl mx-auto text-center">
@@ -36,9 +39,9 @@ const ContactSection: React.FC = () => {
             Thank you for your Interest in CreaSeils.
           </h2>
           <p className="text-base sm:text-lg max-w-3xl mx-auto font-inter">
-            We would love to hear from you and discuss how we can help bring your
-            digital ideas to life. Here are the different ways you can get in
-            touch with us.
+            We would love to hear from you and discuss how we can help bring
+            your digital ideas to life. Here are the different ways you can get
+            in touch with us.
           </p>
           <button className="mt-10 px-10 py-3 rounded-md text-white font-semibold bg-[#FF80C0] hover:bg-[#e573bf] transition-colors duration-200 transform hover:scale-[1.05]">
             Start Project
@@ -87,20 +90,16 @@ const ContactSection: React.FC = () => {
                   className={`flex items-center cursor-pointer p-2 rounded-md transition-colors duration-200 select-none ${
                     selected
                       ? "text-white"
-
                       : "bg-black bg-opacity-90 text-white  hover:text-[#FF80C0]"
-
                   }`}
                 >
                   <div
                     className={`flex items-center justify-center w-5 h-5 rounded-sm border-2 mr-3 ${
-                      selected
-                        ? "bg-black border-black"
-                        : "border-[#FF80C0]"
+                      selected ? "bg-black border-black" : "border-[#FF80C0]"
                     }`}
                   >
                     {selected && (
-                      <CheckIcon  className="w-4 h-4 text-[#FF80C0] " />
+                      <CheckIcon className="w-4 h-4 text-[#FF80C0] " />
                     )}
                   </div>
                   <span className="text-sm">{reason}</span>
@@ -115,7 +114,9 @@ const ContactSection: React.FC = () => {
           <label className="block text-white font-semibold mb-1 text-lg">
             Your Budget
           </label>
-          <p className="text-gray-300 text-sm mb-4">Slide to indicate your budget range</p>
+          <p className="text-gray-300 text-sm mb-4">
+            Slide to indicate your budget range
+          </p>
           <input
             type="range"
             min="0"

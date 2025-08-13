@@ -315,16 +315,18 @@ const DesignSection = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[url('/images/ourservicebanner.png')] w-full bg-cover bg-center">
+      <section className="relative overflow-hidden bg-[url('/images/ourservicebanner.png')] w-full bg-cover bg-center py-8">
         {/* Hero Content */}
-        <div className="relative z-10 px-4 py-20 md:py-32 text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#FEE3FA] mb-4 md:mb-6 drop-shadow-2xl">
-            Our Services
-          </h1>
-          <p className="text-base md:text-lg text-[#FEE3FA] leading-relaxed max-w-3xl mx-auto">
-            Transform your brand with our innovative digital solutions that
-            captivate and engage your audience.
-          </p>
+        <div className="bg-white/5  backdrop-blur-sm border border-[#FF80C0]/50 rounded-2xl p-8 md:p-12 lg:p-16 text-center max-w-4xl mx-auto">
+          <div className="relative z-10 px-4 py-10 text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#FEE3FA] mb-4 md:mb-6 drop-shadow-2xl">
+              Our Services
+            </h1>
+            <p className="text-base md:text-lg text-[#FEE3FA] leading-relaxed max-w-3xl mx-auto">
+              Transform your brand with our innovative digital solutions that
+              captivate and engage your audience.
+            </p>
+          </div>
         </div>
       </section>
 
