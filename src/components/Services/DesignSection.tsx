@@ -329,7 +329,7 @@ const DesignSection = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 md:py-24 px-4">
+      <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center md:text-left mb-12 md:mb-16">
