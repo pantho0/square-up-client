@@ -1,5 +1,6 @@
 import { PiIcon } from "lucide-react";
 import React, { ReactNode } from "react";
+import { Button } from "@heroui/button";
 
 const DesignSection = () => {
   const uxServices = [
@@ -272,17 +273,17 @@ const DesignSection = () => {
     title: string;
     description: string;
   }) => (
-    <div className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 transition-all duration-300 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden">
+    <div className="group relative bg-white/5 backdrop-blur-sm border border-[#FF80C0]/50 rounded-2xl p-6 md:p-8 transition-all duration-300 hover:transform hover:-translate-y-2 hover:border-[#FF80C0] hover:shadow-xl hover:shadow-pink-500/20 overflow-hidden">
       {/* Hover gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-pink-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#FF80C0]/10 to-pink-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
 
       {/* Content */}
       <div className="relative z-10">
         {/* The icon prop is now being rendered correctly here */}
-        <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 md:mb-6">
+        <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-pink-500 to-[#FF80C0] rounded-xl flex items-center justify-center mb-4 md:mb-6">
           {icon}
         </div>
-        <h4 className="text-xl font-semibold text-white mb-3 md:mb-4 leading-tight">
+        <h4 className="text-xl font-semibold text-[#FEE3FA] mb-3 md:mb-4 leading-tight">
           {title}
         </h4>
         <p className="text-gray-300 leading-relaxed text-sm md:text-base">
@@ -300,7 +301,7 @@ const DesignSection = () => {
     services: { icon: ReactNode; title: string; description: string }[];
   }) => (
     <div className="mb-12 md:mb-20">
-      <h3 className="text-xl md:text-3xl font-semibold text-white mb-8 md:mb-10 border-l-4 border-purple-500 pl-4 md:pl-6">
+      <h3 className="text-xl md:text-3xl font-semibold text-[#FEE3FA] mb-8 md:mb-10 border-l-4 border-[#FF80C0] pl-4 md:pl-6">
         {title}
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -320,7 +321,7 @@ const DesignSection = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#FEE3FA] mb-4 md:mb-6 drop-shadow-2xl">
             Our Services
           </h1>
-          <p className="text-base md:text-xl text-[#FEE3FA] leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-[#FEE3FA] leading-relaxed max-w-3xl mx-auto">
             Transform your brand with our innovative digital solutions that
             captivate and engage your audience.
           </p>
@@ -328,14 +329,14 @@ const DesignSection = () => {
       </section>
 
       {/* Services Section */}
-      <section className=" py-16 md:py-24 px-4">
+      <section className="py-16 md:py-24 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center md:text-left mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#FEE3FA] mb-4">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#FEE3FA] mb-4">
               Design
             </h2>
-            <p className="text-base md:text-lg text-[#FEE3FA] leading-relaxed max-w-4xl mb-6">
+            <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-4xl mb-6">
               At CreaSells, our design team is passionate about creating
               stunning, user-centric designs that captivate your audience and
               elevate your brand. We believe that great design is not just about
