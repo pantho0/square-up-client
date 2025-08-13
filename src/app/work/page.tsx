@@ -1,9 +1,13 @@
-import { title } from "@/src/components/primitives";
+import WorkPageBanner from "@/src/components/Work/WorkPageBanner";
+import WorkPageBottomContent from "@/src/components/Work/WorkPageBottomContent";
+import WorkPageContent from "@/src/components/Work/WorkPageContent";
 
 export default function WorkPage() {
   return (
-    <div>
-      <h1 className={title()}>Work</h1>
-    </div>
+    <>
+      <WorkPageBanner />
+      <WorkPageContent />
+      <WorkPageBottomContent />
+    </>
   );
 }
